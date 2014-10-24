@@ -1,77 +1,59 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class CharacterMovement : MonoBehaviour {
 	
-	public float speed =1.0f;
-	public string axisName = "Horizontal";
-	public Animator anim;
-	private bool jumping = false;
-	private bool jumpUp = false;
-	private Vector3 lastPosition = transform.position;
+	public Animator anim = null;
+	private bool movementUp = false;
+    private Vector3 lastPosition = new Vector3();
+    public GameObject player;
 	
-	// Use this for initialization
+	/*// Use this for initialization
 	void Start () {
-		anim = gameObject.GetComponent<Animator> ();
+		// = gameObject.GetComponent<Animator> ();
+        //Physics2D.IgnoreCollision(player.collider2D, this.collider2D);
 	}
 	// Update is called once per frame
 	void FixedUpdate () {
-		anim.SetFloat("Speed", Mathf.Abs(Input.GetAxis(axisName)));
+        //transform.position = player.transform.position;
+        //Debug.Log("x:" + transform.position.x + ", y:" + transform.position.y);
+        //Console.WriteLine("update");
+        //Debug.Log("update");
+		//anim.SetFloat("Speed", Mathf.Abs(Input.GetAxis(axisName)));
 		
 		
 		
-		if (Input.GetAxis (axisName) < 0) {
-			Vector3 newScale = transform.localScale;
-			newScale.y = 1.0f;
-			newScale.x = 1.0f;
-			transform.localScale = newScale;
-		} else if (Input.GetAxis (axisName) > 0) {
-			Vector3 newScale = transform.localScale;
-			newScale.x = 1.0f;
-			transform.localScale = newScale;
-		}
 		
-		transform.position += transform.right *Input.GetAxis(axisName)* speed * Time.deltaTime;
 		//transform.position += transform.up * jumpForce * Time.deltaTime;
 		
-		
-		if (jumping && (lastPosition * Vector3.up < transform.position * Vector3.up)) {
+
+		if (lastPosition.y <= transform.position.y) {
 			// es geht nach oben
-			jumpUp = true;
+			movementUp = true;
 		} else {
-			jumpUp = false;
+			movementUp = false;
 		}
 		lastPosition = transform.position;
 		
 	}
 	
-	void OnCollisionEnter2D(Collision2D coll) {
+	void OnTriggerEnter2D(Collider2D coll) {
 		if (coll.gameObject.tag == "Plattform") {
-			if (jumping && jumpUp) {
-				Physics2D.IgnoreCollision(this.collider2D, coll.gameObject.collider2D);
+			if (movementUp) {
+				//Physics2D.IgnoreCollision(player.collider2D, coll.gameObject.collider2D);
 			}
 		}
 	}
-	
-	void OnCollisionStay2D(Collision2D coll ) {
-		if (coll.gameObject.tag == "Ground" && Input.GetButtonDown("Jump") && !jumping) {
-			this.rigidbody2D.AddForce(Vector2.up * 750);
-			jumping = true;
-		}
-	}
-	
-	void OnCollisionExit2D(Collision2D coll) {
-		if (coll.gameObject.tag == "Ground") {
-			jumping = false;
-		} else if (coll.gameObject.tag == "Plattform") {
-			// reenable
-		}
-	}
-	
+
+    void OnTriggerStay2D(Collider2D coll)
+    {
+        Debug.Log("stay");
+    }
 	
 	
 	// Update is called once per frame
 	void Update () {
 		
-	}
+	}*/
 }
