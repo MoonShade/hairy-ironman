@@ -26,7 +26,7 @@ public class PlayerJumpController : MonoBehaviour {
         else if (Input.GetAxis(axisName) > 0)
         {
             Vector3 newScale = transform.localScale;
-            newScale.x = 1.0f;
+            newScale.x = -1.0f;
             transform.localScale = newScale;
         }
 
