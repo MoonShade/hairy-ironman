@@ -1,9 +1,8 @@
 fileFormatVersion: 2
-guid: 7db36e83ef8c1e5489c1a71000bf1f6f
+guid: d4ae65cbd6dcfab4da1e378882f576dc
 TextureImporter:
   fileIDToRecycleName:
-    21300000: backgrounds
-    21300002: backgrounds_0
+    21300000: wow
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -24,12 +23,12 @@ TextureImporter:
   generateCubemap: 0
   seamlessCubemap: 0
   textureFormat: -3
-  maxTextureSize: 4096
+  maxTextureSize: 1024
   textureSettings:
-    filterMode: 2
-    aniso: 1
+    filterMode: 0
+    aniso: -1
     mipBias: -1
-    wrapMode: 1
+    wrapMode: -1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -44,16 +43,6 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites:
-    - name: backgrounds_0
-      rect:
-        serializedVersion: 2
-        x: 516
-        y: 1304
-        width: 512
-        height: 432
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+    sprites: []
   spritePackingTag: 
   userData: 
