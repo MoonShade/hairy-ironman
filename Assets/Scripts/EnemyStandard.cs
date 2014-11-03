@@ -15,17 +15,23 @@ public class EnemyStandard : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-
+        if (coll.gameObject.tag == "Player")
+        {
+            //Destroy(coll.gameObject);
+            Globals.Lifes -= 1;
+            Application.LoadLevel(Application.loadedLevel);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D coll)
     {
-        Debug.Log("enemy trigger");
         if (coll.gameObject.tag == "Player")
         {
-            Debug.Log("is player");
+            // player jumps
             coll.gameObject.rigidbody2D.velocity = Vector3.zero;
             coll.gameObject.rigidbody2D.AddForce(Vector2.up * 750 * 0.7F);
+            // enemy dies
+            Destroy(this.gameObject);
         }
     }
 }
