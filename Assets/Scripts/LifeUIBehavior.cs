@@ -4,6 +4,7 @@ using System.Collections;
 public class LifeUIBehavior : MonoBehaviour {
 
     public int lifecount = 1;
+    public float hSliderValue = 0.0F;
 
 	// Use this for initialization
 	void Start () {
@@ -11,10 +12,11 @@ public class LifeUIBehavior : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+    void Update()
+    {
         if (lifecount > Globals.Lifes)
         {
             Destroy(this.gameObject);
         }
-	}
+    }
 }
