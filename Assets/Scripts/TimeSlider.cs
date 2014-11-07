@@ -16,10 +16,10 @@ public class TimeSlider : MonoBehaviour {
         float sliderPos = Time.timeSinceLevelLoad / maxTime;
         this.GetComponent<Slider>().value = sliderPos;
 
-        Debug.Log(Time.timeSinceLevelLoad.ToString());
-        if (Time.timeSinceLevelLoad.ToString() == "100")
+        //Debug.Log(Time.timeSinceLevelLoad.ToString());
+        if (Time.timeSinceLevelLoad >= maxTime)
         {
-            Application.LoadLevel("MainMenu");
+            Application.LoadLevel("TimeUp");
         }
     }
 }

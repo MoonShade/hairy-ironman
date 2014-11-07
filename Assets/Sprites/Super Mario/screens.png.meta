@@ -3,6 +3,9 @@ guid: c82b06ad0197cd340b4dc12cffec47bf
 TextureImporter:
   fileIDToRecycleName:
     21300000: screens
+    21300002: screens_0
+    21300004: screens_1
+    21300006: screens_2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -25,7 +28,7 @@ TextureImporter:
   textureFormat: -3
   maxTextureSize: 1024
   textureSettings:
-    filterMode: 2
+    filterMode: 0
     aniso: 1
     mipBias: -1
     wrapMode: 1
@@ -43,6 +46,36 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: screens_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 53
+        width: 256
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: screens_1
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 53
+        width: 256
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: screens_2
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 53
+        width: 256
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

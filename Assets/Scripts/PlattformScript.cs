@@ -19,7 +19,8 @@ public class PlattformScript : MonoBehaviour {
     {
         if (coll.gameObject.tag == "Player")
         {
-            colliders = this.gameObject.transform.parent.gameObject.GetComponents<Collider2D>();
+            //colliders = this.gameObject.transform.parent.gameObject.GetComponents<Collider2D>();
+            colliders = this.gameObject.GetComponents<Collider2D>();
             foreach (Collider2D collider in colliders) {
                 if (!collider.isTrigger)
                 {

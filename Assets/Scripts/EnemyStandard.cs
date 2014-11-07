@@ -18,8 +18,7 @@ public class EnemyStandard : MonoBehaviour {
         if (coll.gameObject.tag == "Player")
         {
             //Destroy(coll.gameObject);
-            Globals.Lifes -= 1;
-            Application.LoadLevel(Application.loadedLevel);
+            Globals.ReduceLife();
         }
     }
 

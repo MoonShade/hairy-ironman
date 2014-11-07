@@ -14,7 +14,7 @@ public class LifeUIBehavior : MonoBehaviour {
 	// Update is called once per frame
     void Update()
     {
-        if (lifecount > Globals.Lifes)
+        if (lifecount > Globals.LifeCount())
         {
             Destroy(this.gameObject);
         }

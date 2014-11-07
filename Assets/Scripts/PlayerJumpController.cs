@@ -66,7 +66,7 @@ public class PlayerJumpController : MonoBehaviour {
 
     void OnCollisionStay2D(Collision2D coll)
     {
-        if (coll.gameObject.tag == "Ground" && Input.GetButton("Jump") && !jumpingStart && !movementUp)
+        if ((coll.gameObject.tag == "Ground" || coll.gameObject.tag == "Plattform") && Input.GetButton("Jump") && !jumpingStart && !movementUp)
         {
             this.rigidbody2D.AddForce(Vector2.up * 750);
             this.GetComponentInChildren<Animator>().Play("Mario_jump");
@@ -93,7 +93,7 @@ public class PlayerJumpController : MonoBehaviour {
         }
         else if (coll.gameObject.tag == "Plattform")
         {
-            // reenable
+            jumpingStart = false;
         }
     }
 
