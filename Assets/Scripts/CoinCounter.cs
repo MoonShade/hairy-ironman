@@ -12,5 +12,9 @@ public class CoinCounter : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         this.gameObject.GetComponent<Text>().text = Globals.GetCoinCount().ToString();
+		if (Globals.GetCoinCount () > 20) {
+			Globals.AddLife ();
+			Globals.ResetCoins();		
+		}
 	}
 }

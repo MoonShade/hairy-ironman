@@ -16,7 +16,7 @@ public class Exit : MonoBehaviour {
     {
         if (coll.gameObject.tag == "Player")
         {
-            Application.LoadLevel("MainMenu");
+            Application.LoadLevel("WinScreen");
         }
     }
 }

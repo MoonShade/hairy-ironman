@@ -32,7 +32,7 @@ public class EnemyMoving : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-        if (coll.gameObject.tag == "Side")
+		if (coll.gameObject.tag == "Side" || coll.gameObject.tag == "Enemy")
         {
             isRight = !isRight;
         }

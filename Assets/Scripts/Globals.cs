@@ -22,6 +22,11 @@ public class Globals
         }
     }
 
+	public static void AddLife()
+	{
+		Debug.Log("Lifes");
+		Lifes += 1;
+	}
 
     public static int LifeCount()
     {
@@ -38,5 +43,9 @@ public class Globals
     {
         return Coins;
     }
+
+	public static void ResetCoins(){
+		Coins = 0;
+	}
 
 }
