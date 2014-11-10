@@ -68,6 +68,7 @@ public class PlayerJumpController : MonoBehaviour {
     {
         if ((coll.gameObject.tag == "Ground" || coll.gameObject.tag == "Plattform" || coll.gameObject.tag == "Side") && Input.GetButton("Jump") && !jumpingStart && !movementUp)
         {
+            this.rigidbody2D.velocity = Vector3.zero;
             this.rigidbody2D.AddForce(Vector2.up * 750);
             this.GetComponentInChildren<Animator>().Play("Mario_jump");
             jumpingStart = true;
